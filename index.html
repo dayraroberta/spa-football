@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1533195059" />
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <title>Football Map</title>
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+  <link rel="stylesheet" href="dist/css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-info d-inline-block w-100">
+    <a class="navbar-brand" href="#">
+      <img src="dist/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> Football Map
+    </a>
+    <a href="/" class="ml-5 text-light">Home</a>
+    <a href="/about" class="ml-5 text-light">About</a>
+  </nav>
+  <main style="background: grey;" class="text-center">
+    <div class="text-center text-light">
+      <h3>Bem-vindo ao Football Map!</h3>
+      <h4>No mapa abaixo, organizamos todos os times da NFL por sua localização.</h4>
+      <h5>Ao clicar no marcador, saberá qual é o time, seu estádio e a capacidade do estádio.</h5>
+    </div>
+    <div class="text-center" id="teams" style="margin-left: auto; margin-right: auto;">
+      <button class="btn btn-light m-5" id="show-conference" type="button">Mostrar lista de times</button>
+      <button class="btn btn-light m-5" id="hide-conference" type="button">Ocultar listas de times</button>
+      <div class="AFC d-flex justify-content-center">
+        <img src="dist/images/afc.png" class="m-4" style="width: 10%; height: 65px;" />
+        <ul class="afcEast ">
+          <li>AFC East</li>
+          <li>Buffalo Bills</li>
+          <li>Miami Dolphins</li>
+          <li>New England Patriots</li>
+          <li>New York Jets</li>
+        </ul>
+        <ul class="afcNorth">
+          <li>AFC North</li>
+          <li>Baltimore Ravens</li>
+          <li>Cincinnati Bengals</li>
+          <li>Cleveland Browns</li>
+          <li>Pittsburgh Steelers</li>
+        </ul>
+        <ul class="afcSouth">
+          <li>AFC South</li>
+          <li>Houston Texans</li>
+          <li>Indianapolis Colts</li>
+          <li>Jacksonville Jaguars</li>
+          <li>Tennessee Titans</li>
+        </ul>
+        <ul class="afcWest">
+          <li>AFC West</li>
+          <li>Denver Broncos</li>
+          <li>Kansas City Chiefs</li>
+          <li>Los Angles Chargers</li>
+          <li>Oakland Raiders</li>
+        </ul>
+      </div>
+      <div class="NFC d-flex justify-content-center">
+        <img src="dist/images/nfc.png" class="m-4" style="width: 10%; height: 65px;" />
+        <ul class="nfcEast">
+          <li>NFC East</li>
+          <li>Dallas Cowboys</li>
+          <li>New York Giants</li>
+          <li>Philadelphia Eagles</li>
+          <li>Washington Redskins</li>
+        </ul>
+        <ul class="nfcNorth">
+          <li>NFC North</li>
+          <li>Chicago Bears</li>
+          <li>Detroit Lions</li>
+          <li>Green Bay Packers</li>
+          <li>Minnesota Vikings</li>
+        </ul>
+        <ul class="nfcSouth">
+          <li>NFC South</li>
+          <li>Atlanta Falcons</li>
+          <li>Carolina Panthers</li>
+          <li>New Orleans Saints</li>
+          <li>Tampa Bay Buccaneers</li>
+        </ul>
+        <ul class="nfcWest">
+          <li>NFC West</li>
+          <li>Arizona Cardinals</li>
+          <li>Los Angeles Rams</li>
+          <li>San Francisco 49ers</li>
+          <li>Seattle Seahawks</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <div id="map" style="width: 100%; height: 400px; background: grey;" />
+  <footer class="fixed-bottom bg-info">
+    <p class="text-light text-center">Site não oficial | &copy;Dayra Roberta</p>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="dist/app.js"></script>
+  <script src="dist/routes.js"></script>
+</body>
+
+</html>

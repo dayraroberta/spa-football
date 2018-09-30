@@ -1,0 +1,9 @@
+ul {
+  list-style: none;
+  color: #ffff;
+}
+
+.nfl-container {
+  width: 50%;
+  word-wrap: break-word;
+}
